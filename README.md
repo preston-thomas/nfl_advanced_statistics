@@ -7,5 +7,5 @@ More coming soon, including run instructions.
 # Antipated Requirements
 * DBeaver or another database manager of your choice
 * A local PostgreSQL installation
-* Python 3.10
+* Python
 *  psycopg2 Python package for SQL connection, pandas for data manipulation
