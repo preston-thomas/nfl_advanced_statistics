@@ -15,3 +15,6 @@ More coming soon...
 * You will need to download the database dump located in the SQL directory and run it in your local database manager
 * You will then need to establish a connection to your local PostgreSQL database, using the connection string, which is found at the top of the data_ingestion.py file
 * More TBD...
+
+# Citations
+All data currently in the database contributed from the CSVs found here: zackthoutt/nfl-player-stats. This repository contains the source code responsible for scraping data from multiple sources weekly.
