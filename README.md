@@ -4,7 +4,7 @@ This will hone my machine-learning skills while exploring some of my greatest pa
 
 More coming soon...
 
-# Antipated Requirements
+# Anticipated Requirements
 * DBeaver or another database manager of your choice
 * A local PostgreSQL installation
 * Python
