@@ -1,6 +1,6 @@
 # Python NFL Statistics Machine Learning Project
 
-This will hone my machine learning skills, while exploring one of my greatest passions in life - NFL football and advanced metrics.
+This will hone my machine-learning skills while exploring some of my greatest passions in life - NFL football, fantasy football, and advanced metrics.
 
 More coming soon...
 
@@ -11,6 +11,7 @@ More coming soon...
 *  psycopg2 Python package for SQL connection, pandas for data manipulation
 
 # Run Instructions
-* You will need to download the database dump located in the sql directory and run it in your local database manager
+**FAIR WARNING**: The current SQL script that creates the database and loads the initial data into the tables is massive. This might lead to performance issues when initially creating the database, depending on your hardware & database manager. I will try to come up with a way to split this into a few digestible SQL scripts, rather than one huge one.
+* You will need to download the database dump located in the SQL directory and run it in your local database manager
 * You will then need to establish a connection to your local PostgreSQL database, using the connection string, which is found at the top of the data_ingestion.py file
 * More TBD...
