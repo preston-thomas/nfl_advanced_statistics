@@ -8,4 +8,4 @@ More coming soon, including run instructions.
 * DBeaver or another database manager of your choice
 * A local PostgreSQL installation
 * Python 3.10
-** psycopg2 Python package for SQL connection, pandas for data manipulation in Python
+**  psycopg2 Python package for SQL connection, pandas for data manipulation in Python
