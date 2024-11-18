@@ -1,4 +1,6 @@
 import store_data as sd
 
-for obj in sd.datasets:
-    print(obj.get_query())
+
+if __name__ == "__main__":
+    for obj in sd.datasets:
+        print(obj.get_query())

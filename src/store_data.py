@@ -1,8 +1,10 @@
 import data_ingestion as di
 
+# Creating class to store attributes of each dataset
 class Dataset:
 
-    def __init__(self, query, df):
+    def __init__(self, name, query, df):
+        self.name = name
         self.query = query
         self.df = df
         self.mean = 0
@@ -40,11 +42,11 @@ class Dataset:
     def get_mode(self):
         return self.mode
     
-combine = Dataset(di.combine_query, di.combine_raw)
-player = Dataset(di.player_query, di.player_raw)
-qbr_szn = Dataset(di.qbr_szn_query, di.qbr_szn_raw)
-qbr_week = Dataset(di.qbr_week_query, di.qbr_week_raw)
-rosters = Dataset(di.roster_query, di.rosters_raw)
+combine = Dataset("Combine", di.combine_query, di.combine_raw)
+player = Dataset("Player", di.player_query, di.player_raw)
+qbr_szn = Dataset("QBR Szn", di.qbr_szn_query, di.qbr_szn_raw)
+qbr_week = Dataset("QBR Week", di.qbr_week_query, di.qbr_week_raw)
+rosters = Dataset("Rosters", di.roster_query, di.rosters_raw)
 
 datasets = []
 datasets.append(combine)
