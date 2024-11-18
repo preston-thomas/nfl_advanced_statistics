@@ -8,7 +8,7 @@ More coming soon...
 * DBeaver or another database manager of your choice
 * A local PostgreSQL installation
 * Python
-*  psycopg2 Python package for SQL connection to PostgreSQL database, pandas for data manipulation
+* SQLAlchemy Python package for SQL connection to PostgreSQL database, pandas for data manipulation
 
 # Run Instructions
 **FAIR WARNING**: The current SQL script that creates the database and loads the initial data into the tables is massive. This might lead to performance issues when initially creating the database, depending on your hardware & database manager. I will try to come up with a way to split this into a few digestible SQL scripts, rather than one huge one. The likely approach will be to have one script create the database & tables, and then have a separate script for each table to load the table with data. Coming soon...
