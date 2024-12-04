@@ -1,4 +1,4 @@
-# Python NFL Statistics Machine Learning & Modeling Project
+# Python Fantasy Football Quarterback Performance Predictor Project
 
 This will hone my machine-learning and data engineering skills while exploring some of my greatest passions in life - NFL football, fantasy football, and advanced metrics.
 
