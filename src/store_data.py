@@ -43,6 +43,12 @@ class Dataset:
     def get_mode(self):
         return self.mode
     
+    def set_df(self, df):
+        self.df = df
+
+    def get_df(self):
+        return self.df
+    
 combine = Dataset("Combine", di.combine_query, di.combine_raw)
 player = Dataset("Player", di.player_query, di.player_raw)
 qbr_szn = Dataset("QBR Szn", di.qbr_szn_query, di.qbr_szn_raw)
