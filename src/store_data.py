@@ -1,6 +1,7 @@
 import data_ingestion as di
 
 # Creating class to store attributes of each dataset
+# Will I need all of these? Who knows...
 class Dataset:
 
     def __init__(self, name, query, df):
