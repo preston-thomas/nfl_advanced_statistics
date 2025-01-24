@@ -7,15 +7,13 @@ import pandas as pd
 # Might have to modify depending on your local database configuration
 # Password will likely be different on your own installation
 engine = sql.create_engine("postgresql+psycopg2://postgres:nfl_football_rocks@localhost:5432/postgres")
-combine_query = "SELECT * FROM postgres.nfl_data.combine_data"
-player_query = "SELECT * FROM postgres.nfl_data.nfl_players"
-qbr_szn_query = "SELECT * FROM postgres.nfl_data.qbr_szn"
-qbr_week_query = "SELECT * FROM postgres.nfl_data.qbr_week"
-roster_query = "SELECT * FROM postgres.nfl_data.rosters_2024"
+adv_rush_ing_query = "SELECT * FROM postgres.nfl_data.advstats_week_rush WHERE season = 2024"
+pass_ing_query = "SELECT * FROM postgres.nfl_data.ngs_passing WHERE season = 2024"
+rush_ing_query = "SELECT * FROM postgres.nfl_data.ngs_rushing WHERE season = 2024"
+rec_ing_query = "SELECT * FROM postgres.nfl_data.ngs_receiving WHERE season = 2024"
 
 # Processing raw data from SQL databases in pandas dataframes
-combine_raw = pd.read_sql_query(combine_query, engine)
-player_raw = pd.read_sql_query(player_query, engine)
-qbr_szn_raw = pd.read_sql_query(qbr_szn_query, engine)
-qbr_week_raw = pd.read_sql_query(qbr_week_query, engine)
-rosters_raw = pd.read_sql_query(roster_query, engine)
+adv_rush_raw = pd.read_sql_query(adv_rush_ing_query, engine)
+pass_raw = pd.read_sql_query(pass_ing_query, engine)
+rush_raw = pd.read_sql_query(rush_ing_query, engine)
+rec_raw = pd.read_sql_query(rec_ing_query, engine)
