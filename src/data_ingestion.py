@@ -7,6 +7,7 @@ import pandas as pd
 # Might have to modify depending on your local database configuration
 # Password will likely be different on your own installation
 engine = sql.create_engine("postgresql+psycopg2://postgres:nfl_football_rocks@localhost:5432/postgres")
+# Basic queries for each dataset, filtering out historical data
 adv_rush_ing_query = "SELECT * FROM postgres.nfl_data.advstats_week_rush WHERE season = 2024"
 pass_ing_query = "SELECT * FROM postgres.nfl_data.ngs_passing WHERE season = 2024"
 rush_ing_query = "SELECT * FROM postgres.nfl_data.ngs_rushing WHERE season = 2024"
