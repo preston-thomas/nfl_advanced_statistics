@@ -6,14 +6,11 @@ class WelcomeWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("2024 NFL Performance Evaluator")
-        # Layout
-        layout = QVBoxLayout()
 
         # Button initialization
         button = QPushButton("Click here to explore...")
         button.clicked.connect(self.open_main_screen)
         button.setGeometry(50, 50, 200, 50)
-        layout.addWidget(button)
 
     def open_main_screen(self):
         self.main_screen = MainWindow()
