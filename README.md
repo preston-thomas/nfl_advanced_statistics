@@ -12,8 +12,7 @@ More coming soon...
 
 # Run Instructions
 * You will need to load the CSVs into SQL tables
-* You will then need to establish a connection to your local PostgreSQL database, using the connection string, which is found at the top of the data_ingestion.py file
-* NOTE: Your local setup will differ from mine
+* You will then need to establish a connection to your local PostgreSQL database, using a connection string. An example can be found at the top of the data_ingestion.py file
 
 # Citations
-All data currently in the database contributed from the CSVs found from this GitHub profile: nflverse. This repository contains the source code responsible for scraping data from multiple sources, and has a Creative Commons license.
+All data currently in the database contributed from the CSVs found from this GitHub profile: nflverse. This repository contains the source code responsible for scraping data from multiple sources
