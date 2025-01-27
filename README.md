@@ -14,6 +14,7 @@ More coming soon...
 # Run Instructions
 * You will need to load the CSVs into SQL tables
 * You will then need to establish a connection to your local PostgreSQL database, using a connection string. An example can be found at the top of the data_ingestion.py file
+* Instructions on running local Deepseek LLM will be added... best approach seems to be via Ollama
 
 # Citations
 All data currently in the database contributed from the CSVs found from this GitHub profile: nflverse. This repository contains the source code responsible for scraping data from multiple sources
