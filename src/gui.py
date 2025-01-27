@@ -26,7 +26,7 @@ class MainWindow(QDialog):
         
         layout = QVBoxLayout()
         
-        label = QLabel("The 2024 season flew by... sigh... let's explore some stats!")
+        label = QLabel("The 2024 season flew by... sigh... let's explore some stats! (more coming soon!)")
         layout.addWidget(label)
         
         back_button = QPushButton("Back to Welcome Screen")

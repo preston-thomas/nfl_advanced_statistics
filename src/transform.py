@@ -7,8 +7,9 @@ import data_ingestion as di
 # Short comings: fails to consider running back skill
 # TODO: Filter on non-playoff games (do not consider playoffs in the calculation)
 # TODO: Deepseek LLM integration via local install seems possible, and would add breadth to this project. Investigate how possible this is, see if it can query data to answer user prompts
-o_line_query = "SELECT SUM(rushing_yards_before_contact_avg), MAX(team), SUM(carries) FROM nfl_data.ADVSTATS_WEEK_RUSH WHERE  GROUP BY team ORDER BY SUM(rushing_yards_before_contact_avg) DESC"
+o_line_query = "SELECT SUM(rushing_yards_before_contact_avg), MAX(team), SUM(carries) FROM nfl_data.ADVSTATS_WEEK_RUSH GROUP BY team ORDER BY SUM(rushing_yards_before_contact_avg) DESC"
 
 # Processing query
-o_line_data = pd.read_sql_query(o_line_query, di.engine)
-print(o_line_data)
+def process_o_line_query() -> None:
+    o_line_data = pd.read_sql_query(o_line_query, di.engine)
+    print(o_line_data)

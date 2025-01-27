@@ -14,7 +14,8 @@ rush_ing_query = "SELECT * FROM postgres.nfl_data.ngs_rushing WHERE season = 202
 rec_ing_query = "SELECT * FROM postgres.nfl_data.ngs_receiving WHERE season = 2024"
 
 # Processing raw data from SQL databases in pandas dataframes
-adv_rush_raw = pd.read_sql_query(adv_rush_ing_query, engine)
-pass_raw = pd.read_sql_query(pass_ing_query, engine)
-rush_raw = pd.read_sql_query(rush_ing_query, engine)
-rec_raw = pd.read_sql_query(rec_ing_query, engine)
+def ingest_raw_data() -> None:
+    adv_rush_raw = pd.read_sql_query(adv_rush_ing_query, engine)
+    pass_raw = pd.read_sql_query(pass_ing_query, engine)
+    rush_raw = pd.read_sql_query(rush_ing_query, engine)
+    rec_raw = pd.read_sql_query(rec_ing_query, engine)
