@@ -19,6 +19,7 @@ def process_o_line_query() -> pd.DataFrame:
 # Running back efficiency, rushing yards over expected per carry
 def process_rb_roe_query() -> pd.DataFrame:
     rb_roe = di.Dataset()
+    print("Who were the best backs at creating something out of nothing in 2024?")
     rb_roe.set_query("select efficiency, player_display_name, (cast(rush_yards_over_expected as decimal)/rush_attempts) as rush_over_exp_pg, team_abbr from nfl_data.ngs_rushing where season = 2024 and week = 0 order by rush_over_exp_pg desc")
     rb_roe.set_dataframe(pd.read_sql_query(rb_roe.get_query(), di.engine))
     print(rb_roe.get_dataframe())
