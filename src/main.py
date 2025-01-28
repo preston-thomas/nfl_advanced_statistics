@@ -3,7 +3,7 @@ import data_ingestion as di
 import transform as t
 
 if __name__ == "__main__":
-    di.ingest_raw_data()
+    di.process_raw_data()
     t.process_o_line_query()
     # Show initial dialog
     if g.welcome_dialog.exec_() == g.QDialog.Accepted:
