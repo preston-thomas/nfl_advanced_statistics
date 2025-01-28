@@ -44,8 +44,3 @@ main_window = MainWindow()
 
 def show_welcome():
     welcome_dialog.exec_()
-
-if __name__ == "__main__":
-    # Show initial dialog
-    if welcome_dialog.exec_() == QDialog.Accepted:
-        main_window.exec_()
