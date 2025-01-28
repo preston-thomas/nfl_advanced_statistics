@@ -1,3 +1,11 @@
+import sys
+import os
+
+# Add the gui directory to sys.path
+current_directory = os.path.dirname(os.path.abspath(__file__))
+gui_directory = os.path.abspath(os.path.join(current_directory, "../gui"))
+sys.path.append(gui_directory)
+
 import gui as g
 import data_ingestion as di
 import transform as t
