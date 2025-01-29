@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import QLabel, QVBoxLayout, QWidget, QApplication, QPushButton, QMainWindow, QDialog
 from PyQt5.QtCore import Qt
 
+# NOTE: Add buttons that will then open a pandasgui window when clicked (invoked by calling show() on a dataframe)
 
 class WelcomeDialog(QDialog):
     def __init__(self):
