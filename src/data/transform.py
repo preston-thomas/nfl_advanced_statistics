@@ -13,7 +13,9 @@ def process_o_line_query() -> pd.DataFrame:
     o_line = di.Dataset()
     o_line.set_query("select SUM(rushing_yards_before_contact_avg) as szn_rush_yds_before_contact_avg_sum, MAX(team) as team, sum(carries) as szn_carries from nfl_data.ADVSTATS_WEEK_RUSH where season = 2024 and week <= 17 group by team order by SUM(rushing_yards_before_contact_avg) desc")
     o_line.set_dataframe(pd.read_sql_query(o_line.get_query(), di.engine))
-    print(o_line.get_dataframe())
+    player_statistics = dict(zip(o_line.get_dataframe()["szn_rush_yds_before_contact_avg_sum"], o_line.get_dataframe()["team"]))
+    for key in player_statistics:
+        print(key, player_statistics[key])
     return o_line
 
 # Running back efficiency, rushing yards over expected per carry
@@ -22,5 +24,10 @@ def process_rb_roe_query() -> pd.DataFrame:
     print("Who were the best backs at creating something out of nothing in 2024?")
     rb_roe.set_query("select efficiency, player_display_name, (cast(rush_yards_over_expected as decimal)/rush_attempts) as rush_over_exp_pg, team_abbr from nfl_data.ngs_rushing where season = 2024 and week = 0 order by rush_over_exp_pg desc")
     rb_roe.set_dataframe(pd.read_sql_query(rb_roe.get_query(), di.engine))
-    print(rb_roe.get_dataframe())
+    player_statistics = dict(zip(rb_roe.get_dataframe()["rush_over_exp_pg"], rb_roe.get_dataframe()["team_abbr"]))
+    player_statistics_two = dict(zip(rb_roe.get_dataframe()["efficiency"], rb_roe.get_dataframe()["player_display_name"]))
+    for key in player_statistics:
+        print(key, player_statistics[key])
+    for key in player_statistics_two:
+        print(key, player_statistics_two[key])
     return rb_roe
