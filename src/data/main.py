@@ -1,5 +1,6 @@
 import sys
 import os
+import pandasgui as pdg
 
 # Add the gui directory to sys.path
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -18,4 +19,5 @@ if __name__ == "__main__":
     # Show initial dialog
     if g.welcome_dialog.exec_() == g.QDialog.Accepted:
         g.main_window.exec_()
+        pdg.show(t.process_rb_roe_query().get_dataframe())
     
