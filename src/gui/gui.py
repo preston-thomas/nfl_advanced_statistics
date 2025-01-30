@@ -30,7 +30,7 @@ class MainWindow(QDialog):
         label = QLabel("The 2024 season flew by... sigh... let's explore some stats! (more coming soon!)")
         layout.addWidget(label)
         
-        back_button = QPushButton("Exit Program")
+        back_button = QPushButton("Show Me The Best Backs of 2024!")
         back_button.clicked.connect(self.close)  # Close current dialog
         layout.addWidget(back_button, 0, Qt.AlignRight)  # Position button in bottom-right
         
