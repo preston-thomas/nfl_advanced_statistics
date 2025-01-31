@@ -21,7 +21,7 @@ def main():
     rb_df["player_label"] = rb_df["player_display_name"] + " (" + rb_df["team_abbr"] + ")"
 
     # Create scatter plot
-    plt.figure(figsize=(30, 30))  # Adjust figure size for better visibility
+    plt.figure(figsize=(36, 25))  # Adjust figure size for better visibility
     plt.scatter(rb_df['player_label'], rb_df['rush_over_exp_pg'], label='Yards Over Expected Per Carry', color='blue', marker='o')
     plt.scatter(rb_df['player_label'], rb_df['efficiency'], label='Efficiency Rating', color='red', marker='s')
 
@@ -40,6 +40,9 @@ def main():
     plt.legend()
     plt.xticks(ticks=range(len(rb_df)), labels=rb_df["player_label"], rotation=45, ha='right')  # Rotate player names for readability
     plt.grid(True)
+    # Reduce whitespace at the top, add space at the bottom so player names aren't cut off
+    plt.subplots_adjust(top=0.97)
+    plt.subplots_adjust(bottom=0.2)
 
     # Show initial dialog
     if g.welcome_dialog.exec_() == g.QDialog.Accepted:
