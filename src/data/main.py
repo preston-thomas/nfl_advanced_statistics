@@ -17,25 +17,28 @@ def main():
     ol_df = t.process_o_line_query().get_dataframe()
     rb_df = t.process_rb_roe_query().get_dataframe()
 
+    # Create custom x-axis labels
+    rb_df["player_label"] = rb_df["player_display_name"] + " (" + rb_df["team_abbr"] + ")"
+
     # Create scatter plot
-    plt.figure(figsize=(35, 26))  # Adjust figure size for better visibility
-    plt.scatter(rb_df['player_display_name'], rb_df['rush_over_exp_pg'], label='Yards Over Expected Per Carry', color='blue', marker='o')
-    plt.scatter(rb_df['player_display_name'], rb_df['efficiency'], label='Efficiency Rating', color='red', marker='s')
+    plt.figure(figsize=(30, 30))  # Adjust figure size for better visibility
+    plt.scatter(rb_df['player_label'], rb_df['rush_over_exp_pg'], label='Yards Over Expected Per Carry', color='blue', marker='o')
+    plt.scatter(rb_df['player_label'], rb_df['efficiency'], label='Efficiency Rating', color='red', marker='s')
 
     # Annotate each dot with its corresponding value
     for i in range(len(rb_df)):
-        plt.text(rb_df['player_display_name'][i], rb_df['rush_over_exp_pg'][i], 
+        plt.text(rb_df['player_label'][i], rb_df['rush_over_exp_pg'][i], 
                 f"{rb_df['rush_over_exp_pg'][i]:.2f}", fontsize=10, ha='right', va='bottom', color='blue')
         
-        plt.text(rb_df['player_display_name'][i], rb_df['efficiency'][i], 
+        plt.text(rb_df['player_label'][i], rb_df['efficiency'][i], 
                 f"{rb_df['efficiency'][i]:.2f}", fontsize=10, ha='right', va='top', color='red')
 
     # Customize graph
     plt.title("Running Back 2024 Efficiency & Yards Over Expected Per Carry")
-    plt.xlabel("Player")
+    plt.xlabel("Player (Team)")
     plt.ylabel("Value")
     plt.legend()
-    plt.xticks(rotation=45, ha='right')  # Rotate player names for readability
+    plt.xticks(ticks=range(len(rb_df)), labels=rb_df["player_label"], rotation=45, ha='right')  # Rotate player names for readability
     plt.grid(True)
 
     # Show initial dialog
@@ -47,5 +50,3 @@ def main():
 # Run the program
 if __name__ == "__main__":
     main()
-
-    
