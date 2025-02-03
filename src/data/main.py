@@ -28,10 +28,10 @@ def main():
     # Annotate each dot with its corresponding value
     for i in range(len(rb_df)):
         plt.text(rb_df['player_label'][i], rb_df['rush_over_exp_pg'][i], 
-                f"{rb_df['rush_over_exp_pg'][i]:.2f}", fontsize=10, ha='right', va='bottom', color='blue')
+                f"{rb_df['rush_over_exp_pg'][i]:.2f}", fontsize=8, ha='right', va='top', color='blue')
         
         plt.text(rb_df['player_label'][i], rb_df['efficiency'][i], 
-                f"{rb_df['efficiency'][i]:.2f}", fontsize=10, ha='right', va='top', color='red')
+                f"{rb_df['efficiency'][i]:.2f}", fontsize=10, ha='left', va='bottom', color='red')
 
     # Customize graph
     plt.title("Running Back 2024 Efficiency & Yards Over Expected Per Carry")
