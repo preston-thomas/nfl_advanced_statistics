@@ -1,6 +1,6 @@
 # NFL Advanced Statistics Project
 
-This will hone my data engineering skills while exploring some of my greatest passions in life - the NFL, fantasy football, and advanced metrics.
+This will hone my data engineering skills while exploring some of my greatest passions in life - the NFL and advanced metrics.
 
 More coming soon...
 
