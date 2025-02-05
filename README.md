@@ -2,13 +2,13 @@
 
 This will hone my data engineering skills while exploring some of my greatest passions in life - the NFL and advanced metrics.
 
-More coming soon...
+This is still a work in progress, more coming soon...
 
 # Anticipated Requirements
-* DBeaver or another database manager of your choice
-* A local PostgreSQL installation
+* DBeaver or another universal database manager of your choice
+* A local PostgreSQL installation (or another SQL database of your choice, SQLite is another good option)
 * Python
-* SQLAlchemy Python package for SQL connection to PostgreSQL database, Pandas for data manipulation
+* SQLAlchemy Python package for SQL connection to PostgreSQL database, Pandas for data manipulation, PyQt and Matplotlib for vizualization
 
 # Run Instructions
 * You will need to load the CSVs into SQL tables
