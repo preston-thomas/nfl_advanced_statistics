@@ -1,4 +1,4 @@
-# NFL Advanced Statistics Project
+# NFL Advanced Statistics Data Pipeline Project
 
 This will hone my data engineering skills while exploring some of my greatest passions in life - the NFL and advanced metrics.
 
