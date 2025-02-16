@@ -31,7 +31,7 @@ class MainWindow(QDialog):
         layout.addWidget(label)
         
         back_button = QPushButton("Show Me The Best Backs of 2024!")
-        back_button.clicked.connect(self.close)  # Close current dialog
+        back_button.clicked.connect(self.close)  # Close current dialog when clicked
         layout.addWidget(back_button, 0, Qt.AlignRight)  # Position button in bottom-right
         
         self.setLayout(layout)
