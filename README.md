@@ -6,7 +6,7 @@ This is still a work in progress, more coming soon...
 
 # Anticipated Requirements
 * DBeaver or another universal database manager of your choice
-* A local PostgreSQL installation (or another SQL database of your choice, SQLite is another good option)
+* A local PostgreSQL installation (or another SQL database of your choice, SQLite is another good, lightweight option)
 * Python
 * SQLAlchemy Python package for SQL connection to PostgreSQL database, Pandas for data manipulation, PyQt and Matplotlib for vizualization
 
