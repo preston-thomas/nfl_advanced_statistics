@@ -14,7 +14,7 @@ class WelcomeDialog(QDialog):
         label = QLabel("Welcome to the 2024 NFL Performance Evaluator!")
         layout.addWidget(label)
         
-        button = QPushButton("Click here to explore...")
+        button = QPushButton("Explore...")
         button.clicked.connect(self.accept)  # Close dialog and return accepted
         layout.addWidget(button)
         
