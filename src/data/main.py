@@ -12,8 +12,9 @@ import data_ingestion as di
 import transform as t
 
 def rb_processing():
-    # Close Qt window
-    g.rb_button.close()
+    # Close main window, as it overlaps with plot
+    # TODO: Optimize this behavior
+    g.main_window.close()
     # Process data
     di.process_raw_data()
     rb_df = t.process_rb_roe_query().get_dataframe()
@@ -46,7 +47,9 @@ def rb_processing():
     plt.subplots_adjust(bottom=0.2)
 
     plt.show()
+    # TODO: Replace this logic with an on close action, which will reopen main when the plot is closed
     plt.pause(5)
+    main()
 
 
 def main():
