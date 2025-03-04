@@ -11,10 +11,12 @@ import gui as g
 import data_ingestion as di
 import transform as t
 
-def main():
+def rb_processing():
+    # Close main window, as it overlaps with plot
+    # TODO: Optimize this behavior
+    g.main_window.close()
     # Process data
     di.process_raw_data()
-    ol_df = t.process_o_line_query().get_dataframe()
     rb_df = t.process_rb_roe_query().get_dataframe()
 
     # Create custom x-axis labels
@@ -44,11 +46,16 @@ def main():
     plt.subplots_adjust(top=0.97)
     plt.subplots_adjust(bottom=0.2)
 
+    plt.show()
+    # TODO: Replace this logic with an on close action, which will reopen main when the plot is closed
+    plt.pause(5)
+    main()
+
+
+def main():
     # Show initial dialog
     if g.welcome_dialog.exec_() == g.QDialog.Accepted:
         g.main_window.exec_()
-        plt.show()
-
 
 # Run the program
 if __name__ == "__main__":
