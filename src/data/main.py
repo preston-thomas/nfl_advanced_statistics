@@ -49,7 +49,8 @@ def rb_processing():
     plt.show()
     # TODO: Replace this logic with an on close action, which will reopen main when the plot is closed
     plt.pause(5)
-    main()
+    # Calls function creating new main window object upon the pause, need to fully refine
+    g.new_main_window().exec_()
 
 
 def main():

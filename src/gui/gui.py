@@ -54,3 +54,7 @@ main_window = MainWindow()
 
 def show_welcome():
     welcome_dialog.exec_()
+
+def new_main_window():
+    new_main_window = MainWindow()
+    return new_main_window
