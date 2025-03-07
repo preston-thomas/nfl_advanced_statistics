@@ -1,12 +1,8 @@
-import sys
-import os
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 from PyQt5.QtWidgets import QLabel, QVBoxLayout, QWidget, QApplication, QPushButton, QMainWindow, QDialog, QHBoxLayout
 from PyQt5.QtCore import Qt
-
-# Assuming these imports are correctly set up for your project structure
 import data_ingestion as di
 import transform as t
 
