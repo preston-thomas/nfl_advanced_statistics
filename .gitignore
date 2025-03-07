@@ -1,6 +1,1 @@
-.idea/inspectionProfiles/Project_Default.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/nfl_advanced_statistics.iml
-.idea/vcs.xml
+__pycache__/
