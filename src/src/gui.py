@@ -14,9 +14,11 @@ class MatplotlibCanvas(FigureCanvas):
         super(MatplotlibCanvas, self).__init__(self.fig)
 
 class PlotWindow(QDialog):
-    def __init__(self, parent=None):
+    # Able to pass in stat type for scalability once QB, WR stats are added
+    def __init__(self, parent=None, stat_type="rb"):
         super(PlotWindow, self).__init__(parent)
-        self.setWindowTitle("Running Back Stats")
+        self.stat_type = stat_type
+        self.setWindowTitle(f"{stat_type.upper()} Stats")
         # Make the window larger to accommodate the plot
         self.setMinimumSize(1200, 800)
         
@@ -38,7 +40,13 @@ class PlotWindow(QDialog):
         self.setLayout(layout)
         
         # Generate and display the plot
-        self.plot_rb_data()
+        if self.stat_type == "rb":
+            self.plot_rb_data()
+        elif self.stat_type == "wr":
+            # This will be added soon, same with QB
+            pass
+        elif self.stat_type == "qb":
+            pass
     
     def plot_rb_data(self):
         # Process data
