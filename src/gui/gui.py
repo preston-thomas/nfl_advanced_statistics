@@ -56,5 +56,6 @@ def show_welcome():
     welcome_dialog.exec_()
 
 def new_main_window():
+    # To be invoked when a plot is closed by the user, reopening the main window of the program
     new_main_window = MainWindow()
     return new_main_window
