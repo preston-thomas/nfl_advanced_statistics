@@ -4,7 +4,8 @@ import data_ingestion as di
 
 # This query attempts to evaluate which teams have the best offensive lines
 # Logic: sum the average rush yards before contact, group by each team, order by the highest total
-# Short comings: fails to consider running back skill
+# Short comings: fails to consider running back skill independently from offensive line play
+# Example: Kenneth Walker may make Seattle's line look better than they are
 
 # Processing offensive line performance query
 # NOTE: This does not consider scheme in yards before contact
