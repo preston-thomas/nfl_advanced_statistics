@@ -109,6 +109,10 @@ class MainWindow(QDialog):
         rb_button = QPushButton("Running Backs")
         rb_button.clicked.connect(self.show_rb_plot)
         layout.addWidget(rb_button, 0, alignment=Qt.AlignLeft)
+
+        # Offensive line button
+        # TODO: Build out plot before implementing
+        # oline_button = QPushButton("Offensive Lines")
         
         self.setLayout(layout)
     
