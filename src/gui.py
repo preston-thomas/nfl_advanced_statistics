@@ -113,6 +113,8 @@ class MainWindow(QDialog):
         # Offensive line button
         # TODO: Build out plot before implementing
         # oline_button = QPushButton("Offensive Lines")
+        # oline_button.clicked.connect(self.show_oline_plot)
+        # layout.addWidget(oline_button, 0, alignment=Qt.AlignMiddle)
         
         self.setLayout(layout)
     
