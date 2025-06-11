@@ -15,4 +15,4 @@ This is still a work in progress, more coming soon...
 * You will then need to establish a connection to your local PostgreSQL database, using a connection string. An example can be found at the top of the data_ingestion.py file
 
 # Citations
-All data currently in the database contributed from the CSVs found from this GitHub profile: nflverse. This repository contains the source code responsible for scraping data from multiple sources
+All data currently in the database contributed from the CSVs found from this GitHub profile: nflverse. This repository contains the source code responsible for scraping data from multiple sources and is refreshed on a week-to-week basis during the NFL season.
